@@ -5,7 +5,7 @@ const lista = document.getElementById("lista");
 let tareas = localStorage.getItem("tareas") ? JSON.parse(localStorage.getItem("tareas")) : [];
 let editando = false;
 let nombre_previo = "";
- personas = [ persona = {nombre : "", edad: ""}]
+ //personas = [ persona = {nombre : "", edad: ""}]
  //Esta condicional es igual a la condicional expuesta en tareas 
 // if(localStorage.getItem("tareas")){
 //     let tareas = JSON.parse(localStorage.getItem("tareas"))
@@ -53,11 +53,10 @@ function actualizarLista(){
         li.appendChild(btnEliminar);
 
         const btnEditar = document.createElement("button");
-        btnEditar.classList.add("btn", "btn-warning", "float-right", "mr-2");
          const iconEdit = document.createElement("i");
          iconEdit.classList.add("fa", "fa-edit");
          btnEditar.appendChild(iconEdit);
-         btnEditar.classList.add("btn", "btn-warning", "float-right", "mr-2");
+         btnEditar.classList.add("btn", "btn-warning", "float-right");
          btnEditar.addEventListener("click", () => editarTarea(tarea));
          li.appendChild(btnEditar);
 
@@ -76,6 +75,7 @@ function editarTarea(tarea){
     editando = true;
     nombre_previo = tarea;
     nombreInput.value = tarea;
+    actualizarLista()
 }
 
 
