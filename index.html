@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>nikoparrilla</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Sancreek&display=swap');
+          </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav" style=background:url("https://static01.nyt.com/images/2019/07/02/science/02-well-grilling/well-grilling-superJumbo.jpg?quality=75&auto=webp") no-repeat center
+        center / cover;>
+            <div class="container">
+                <img class="navbar-brand" src="assets/img/logonikom.png" alt="..." />
+                <a class="navbar-brand" href="#page-top">NikoParrilla</a>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">La mejor carne a la parrilla de la ciudad</p>
+            </div>
+        </header>
+        <!-- Contact Section-->
+        <section class="page-section" id="contact" style=background:url("https://static01.nyt.com/images/2019/07/02/science/02-well-grilling/well-grilling-superJumbo.jpg?quality=75&auto=webp") no-repeat center
+        center / cover;>
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">realiza tu pedido</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Form-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text"/>
+                                <label for="name">Nombre Completo</label>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel"/>
+                                <label for="phone">Teléfono de contacto</label>
+                            </div>
+                             <!-- Adress input-->
+                             <div class="form-floating mb-3">
+                                <input class="form-control" id="adress" type="adress"/>
+                                <label for="adress">Dirección de domicilio</label>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="nombreInput" type="ordenPedido" />
+                                <label for="pedido">Pedido</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <button type="button" class="btn btn-primary btn-block mb-2" onclick="agregarTarea()">Agregar</button>
+                                <button type="button" class="btn btn-danger btn-block mb-2" onclick="limpiarStorage()">Limpiar</button>
+                                <!-- <button type="button" class="btn btn-primary btn-block mb-2" onclick="actualizarLista()">Actualizar</button> -->
+                            </div>
+                            <div class="form-floating mb-3">
+                                <ul class="list-group" id="lista">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    A list item
+                                     <button type="button" class="btn btn-danger btn-sm"> X</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <!--div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Te llegará confirmación de tu reserva a tu email o teléfono</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div-->
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <!--div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error al enviar el mensaje</div></div-->
+                            <!-- Submit Button-->
+                            <!--button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Enviar</button-->
+
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Niko parrilla</h4>
+                        <p class="lead mb-0">
+                            Carne a la parrilla
+                            <br />
+                            (+57)3015968374
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Encuéntranos en redes sociales</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/nikoparrillaoficial/"><i class="fab fa-fw fa-instagram"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                   
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; Your Website 2023</small></div>
+        </div>
+       
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <!--script src="js/scripts.js"></script-->
+        <script src="js/main.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
