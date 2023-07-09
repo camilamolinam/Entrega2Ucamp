@@ -1,8 +1,17 @@
 console.log("Hola desde Js");
 
-const nombreInput = document.getElementById("nombreInput");
+const pedidoInput = document.getElementById("pedidoInput");
 const lista = document.getElementById("lista");
+const personaInput =document.getElementById("name")
+const telefonoInput=document.getElementById("phone")
+const direccionInput=document.getElementById("adress")
+
+
 let tareas = localStorage.getItem("tareas") ? JSON.parse(localStorage.getItem("tareas")) : [];
+let nombres = localStorage.getItem("nombres") ? JSON.parse(localStorage.getItem("nombres")) : [];
+let direcciones = localStorage.getItem("direcciones") ? JSON.parse(localStorage.getItem("direcciones")) : [];
+let telefonos = localStorage.getItem("telefonos") ? JSON.parse(localStorage.getItem("telefonos")) : [];
+
 let editando = false;
 let nombre_previo = "";
  //personas = [ persona = {nombre : "", edad: ""}]
@@ -25,15 +34,15 @@ let nombre_previo = "";
 
 function agregarTarea() {
    if(editando){
-        tareas = tareas.map(tnueva => tnueva === nombre_previo ? nombreInput.value : tnueva);
+        tareas = tareas.map(tnueva => tnueva === nombre_previo ? pedidoInput.value : tnueva);
         localStorage.setItem("tareas", JSON.stringify(tareas));
         editando = false;
    }else{
-    const tarea = nombreInput.value;
+    const tarea = pedidoInput.value;
     tareas.push(tarea)
     localStorage.setItem("tareas",JSON.stringify(tareas));
    }
-    nombreInput.value = "";
+    pedidoInput.value = "";
     actualizarLista();
 }
 
@@ -72,10 +81,11 @@ function deleteTarea(tarea){
 }
 
 function editarTarea(tarea){
-    editando = true;
-    nombre_previo = tarea;
-    nombreInput.value = tarea;
-    actualizarLista()
+
+    editando=true
+    nombre_previo=tarea
+    pedidoInput.value = tarea;
+  
 }
 
 
@@ -83,6 +93,32 @@ function limpiarStorage(){
     localStorage.clear();
     tareas = [];
     actualizarLista();
+}
+
+function enviarFormulario(){
+
+    const nombre = personaInput.value;
+    nombres.push(nombre);
+    localStorage.setItem("nombres",JSON.stringify(nombres));
+    
+    const telefono = telefonoInput.value;
+    telefonos.push(telefono);
+    localStorage.setItem("telefonos",JSON.stringify(telefonos));
+   
+    const direccion = direccionInput.value;
+    direcciones.push(direccion);
+    localStorage.setItem("direcciones",JSON.stringify(direcciones));
+    
+    
+    personaInput.value ="";
+    telefonoInput.value="";
+    direccionInput.value="";
+
+
+    const formulario=document.getElementById("contactForm");
+    const mensajeConfirmacion=document.createElement("p");
+    mensajeConfirmacion.textContent="Mensaje enviado";
+    formulario.appendChild(mensajeConfirmacion);
 }
 
 actualizarLista()

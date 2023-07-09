@@ -79,8 +79,19 @@
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="nombreInput" type="nombreInput" />
                                 <label for="pedido">Pedido</label>
+                                <select name="pedido" class="form-control" id="pedidoInput" type="pedidoInput"> 
+                                    <option value="puntadeanca">Punta de Anca</option>
+                                    <option value="solomo">Solomo</option>
+                                    <option value="churrasco">Churrasco</option>
+                                    <option value="mixto">Mixto</option>
+                                    <option value="picada">Picada</option>
+                                    <option value="chorizo">Chorizo</option>
+                                    <option value="panceta">Panceta</option>
+                                    <option value="canon">Cañon</option>
+                                    <option value="costilla">Costilla</option>
+
+                                </select>
                             </div>
                             <div class="form-floating mb-3">
                                 <button type="button" class="btn btn-primary btn-sm" onclick="agregarTarea()">Agregar</button>
@@ -95,6 +106,7 @@
                                     </li>
                                 </ul>
                             </div>
+                            <button class="btn btn-primary btn-lg" id="submitButton" type="submit" onclick="enviarFormulario()"> Enviar</button>
                         </div>
                             </div>
                             <!-- Submit success message-->
@@ -115,9 +127,7 @@
                             <!-- an error submitting the form-->
                             <!--div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error al enviar el mensaje</div></div-->
                             <!-- Submit Button-->
-                            <!--button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Enviar</button-->
-
-                        
+                            
                         </form>
                     </div>
                 </div>
