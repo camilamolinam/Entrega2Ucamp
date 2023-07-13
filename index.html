@@ -68,8 +68,9 @@
                                 </div-->
                                 <!-- Message input-->
                                 <div class="form-floating mb-3">
-                                    <label for="pedido">Pedido</label>
-                                    <select name="pedido" class="form-control" id="pedidoInput" type="pedidoInput"> 
+                                    <label for="pedido" class="form-select-sm">Pedido</label>
+                                    <select name="pedido" class="form-select form-select-lg mb-3" id="pedidoInput" type="pedidoInput"> 
+                                        <option selected="selector"></option>
                                         <option value="puntadeanca">Punta de Anca</option>
                                         <option value="solomo">Solomo</option>
                                         <option value="churrasco">Churrasco</option>
@@ -91,17 +92,17 @@
                                     <button type="button" class="btn btn-primary btn-sm" onclick="limpiarStorage()">Limpiar</button>
                                     <!-- <button type="button" class="btn btn-primary btn-block mb-2" onclick="actualizarLista()">Actualizar</button> -->
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <table class="table-bordered">
+                                <div class="table-responsive-lg">
+                                    <table class="table table-bordered">
                                         <thead>
-                                            <tr>
-                                                <td>Pedido</td>
-                                                <td>Cantidad</td>
-                                                <td>Datos</td>
-                                                <td>Acciones</td>
+                                            <tr class="table-secondary">
+                                                <th>Pedido</td>
+                                                <th>Cantidad</td>
+                                                <th>Datos</td>
+                                                <th>Acciones</td>
                                             </tr>
                                         </thead>
-                                        <tbody id="tablalista">
+                                        <tbody id="tablalista" class="table-active">
 
 
                                         </tbody>
